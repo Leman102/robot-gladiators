@@ -1,6 +1,11 @@
 // test if script is connect to the html
 // window.alert("This is an alert! JavaScript is runing!")
 
+// Game States
+// "WIN" - Player robot has defeated all enemy-robots
+//    * Fight all enemy-robots
+//    * Defeat each enemy-robot
+// "LOSE" - Player robot's health is zero or less
 
 //capture input data
 var playerName = window.prompt("What's your Robot's name?");
@@ -8,9 +13,10 @@ var playerHealth = 100;
 var playerAttack = 10;
 var playerMoney = 10;
 //log multiple values in the console
-console.log(playerName, playerAttack, playerHealth, playerMoney);
+// console.log(playerName, playerAttack, playerHealth, playerMoney);
 
-var enemyName = "Roborto";
+var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
+// console.log(enemyNames);
 var enemyHealth = 50;
 var enemyAttack = 12;
 
@@ -23,7 +29,7 @@ function fight() {
 */
 
 // function Expression
-var fight = function (){
+var fight = function (enemyName){
     var promptToFight = window.prompt("Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.");
     // promptToFight = promptToFight.toUpperCase;
     console.log(promptToFight);
@@ -68,5 +74,14 @@ var fight = function (){
     }
 }
 
-fight();
+// fight(enemyRobot);
+
+for (var i = 0; i < enemyNames.length; i++){
+    fight(enemyNames[i]);
+    // console.log(enemyNames[i]);
+    // console.log(i);
+    // console.log(enemyNames[i] + " is at " + i + " index");
+}
+
+
 
