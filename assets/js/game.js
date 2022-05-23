@@ -13,6 +13,17 @@ var randomNumber = function(min, max) {
     return value;
 };
 
+// function to set name
+var getPlayerName = function(){
+    var name = "";
+
+    while (name === "" || name === null) {
+        name = prompt("What's your robot's name");
+    };
+
+    console.log("Your robot's name is " + name);
+    return name;
+};
 
 //capture input data
 // var playerName = window.prompt("What's your Robot's name?");
@@ -23,7 +34,7 @@ var randomNumber = function(min, max) {
 /* Replacing Variables for an object */
 
 var playerInfo = {
-    name: window.prompt("What's your Robot's name?"),
+    name: getPlayerName(),
     health : 100,
     attack : 10,
     money : 10,
